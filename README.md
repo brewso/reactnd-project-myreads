@@ -2,6 +2,31 @@ This is the starter template for the final assessment project for Udacity's Reac
 
 Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
 
+
+TODO/Criteria
+Search Page
+Does the search page have a search input that lets users search for books?
+Do the search results allow a user to categorize a book as “currently reading”, “want to read”, or “read”? ##yes
+Do selections made on the search page show up on the main page? ##yes
+
+Routing
+Does the main page link to the search page? ##yes
+Does the search page link back to the main page? ##yes
+
+Code Functionality
+Does the project code handle state management appropriately?
+Is JSX formatted properly?
+
+Application Setup
+Is the application easy to install and start? ##yes
+Does the application include README with clear installation and launch instructions?
+
+Main Page
+Does the main page show three categories (or “bookshelves”) for books (currently reading, want to read, and read)? ## yes
+Does the main page allow users to move books between shelves? ##yes
+Does information persist between page refreshes? ## yes
+
+
 ## What You're Getting
 ```
 +--public/    
@@ -14,17 +39,17 @@ Of course, you are free to start this project from scratch if you wish! Just be 
   |-- arrow-drop-down.svg
  |-- App.js - This is the root of your app. Contains static HTML right now.
  |-- App.css - Styles for your app. Feel free to customize this as you desire.
- |-- App.test.js - Used for testing. Provided with Create React App. 
+ |-- App.test.js - Used for testing. Provided with Create React App.
  Testing is encouraged, but not required.
- |-- BooksAPI.js - A JavaScript API for the provided Udacity backend. 
+ |-- BooksAPI.js - A JavaScript API for the provided Udacity backend.
  Instructions for the methods are below.
  |-- index.js - You should not need to modify this file. It is used for DOM rendering only.
  |-- index.css - Global styles. You probably won't need to change anything here.
-|-- .gitignore 
-|-- CONTRIBUTING.MD - Information about contributing to this repo. 
+|-- .gitignore
+|-- CONTRIBUTING.MD - Information about contributing to this repo.
 TL;DR - Fork and clone your own version of this to use it.
 |-- README.MD - This README file.
-|-- SEARCH_TERMS.md - The whitelisted short collection of available search terms 
+|-- SEARCH_TERMS.md - The whitelisted short collection of available search terms
 for you to use with your app.
 |-- package.json - npm package manager file. It's unlikely that you'll need to modify this.
 ```
@@ -51,7 +76,7 @@ To simplify your development process, we've provided a backend server for you to
 * These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
 ## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results. 
+The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
 ## create-react-app
 
