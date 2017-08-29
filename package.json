@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -9,7 +10,7 @@
   "devDependencies": {
     "react-scripts": "0.9.5"
   },
-   "homepage": "https://brewso.github.io/reactnd-project-myreads",
+  "homepage": "https://brewso.github.io/reactnd-project-myreads/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
