@@ -5,34 +5,23 @@ import BookBuild from './BookBuild.js'
 class ListBooks extends Component {
 
   render() {
-    const { books, changeShelf } = this.props
+    // eslint-disable-next-line
+    const { books, changeShelf } = this.props;
 
-    return(
+    return (
     <div className="list-books">
       <div className="list-books-title">
         <h1>MyReads</h1>
       </div>
       <div className="list-books-content">
         <div>
-        { /**
-          *TODO
-          *DONE populate bookshelf with array of books
-          *DONE filter books based on shelf attribute (api)
-          *DONE use state to control which shelf book is on
-          *DONE allow dropdown to setState
-          *DONE get books from api instead of made array
-          *DONE seperate book Component
-          *
-          *
-          */
-        }
           <div className="bookshelf">
             <h2 className="bookshelf-title">Currently Reading</h2>
             <div className="bookshelf-books">
                 <BookBuild
-                  books={this.props.books}
-                  changeShelf={this.props.changeShelf}
-                  shelf={"currentlyReading"}
+                  showingBooks={ this.props.books }
+                  changeShelf={ this.props.changeShelf }
+                  shelf={ "currentlyReading" }
                   />
             </div>
           </div>
@@ -40,9 +29,9 @@ class ListBooks extends Component {
             <h2 className="bookshelf-title">Want to Read</h2>
             <div className="bookshelf-books">
               <BookBuild
-                books={this.props.books}
-                changeShelf={this.props.changeShelf}
-                shelf={"wantToRead"}
+                showingBooks={ this.props.books }
+                changeShelf={ this.props.changeShelf }
+                shelf={ "wantToRead" }
                 />
             </div>
           </div>
@@ -50,9 +39,9 @@ class ListBooks extends Component {
             <h2 className="bookshelf-title">Read</h2>
             <div className="bookshelf-books">
               <BookBuild
-                books={this.props.books}
-                changeShelf={this.props.changeShelf}
-                shelf={"read"}
+                showingBooks={ this.props.books }
+                changeShelf={ this.props.changeShelf }
+                shelf={ "read" }
                 />
             </div>
           </div>
@@ -65,4 +54,4 @@ class ListBooks extends Component {
   )}
 }
 
-export default ListBooks
+export default ListBooks;

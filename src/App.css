@@ -98,6 +98,10 @@ body, .app {
   background-size: 28px;
   font-size: 0;
 }
+.category {
+  text-align: center;
+
+}
 
 .search-books-results {
   padding: 80px 10px 20px;
@@ -108,8 +112,8 @@ body, .app {
 .books-grid {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-
+  margin: auto;
+  max-width: 650px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -171,4 +175,20 @@ body, .app {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+button {
+  display: flex;
+}
+
+/* page control */
+.page-controls {
+  margin: auto;
+  width: fit-content;
+  display: flex;
+}
+.page-controls button {
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 40%;
 }
