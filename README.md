@@ -8,7 +8,7 @@ uses an Api for a Udacity backend server, the server stores all the book informa
 Use the app by clicking [here](https://brewso.github.io/reactnd-project-myreads)  
 or  
 Take these steps below:  
-clone the repository onto your machine
+clone the repository onto your machine  
 Use your command-line interface  
 ensure you have npm installed  
 run npm install in the cloned directory  
