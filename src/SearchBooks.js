@@ -29,13 +29,12 @@ class SearchBooks extends Component {
   };
 
   changePage = (className) => {
-    (className === 'forward') ?
-      (this.page === this.searchQuery.length -1) ?
-        this.page = 0 :
-        this.page += 1 :
-      (this.page === 0) ?
-        this.page = this.searchQuery.length - 1 :
-        this.page -= 1
+    const firstPage = 0;
+    const lastPage = this.searchQuery.length - 1;
+    (className === 'forward') ? this.page++ : this.page--;
+    // page carousel logic
+    if (this.page < firstPage) { this.page = lastPage };
+    if (this.page > lastPage) { this.page = firstPage };
     this.props.searchAllBooks(this.searchQuery[this.page])
     Scroll.animateScroll.scrollToTop('smooth');
   };
@@ -77,8 +76,12 @@ class SearchBooks extends Component {
         { this.props.error.length > 0 &&
           <h2 className="error">{ error }</h2>
         }
-        { this.state.query.length === 0 &&
-          <h2 className="category">Category : { this.searchQuery[this.page] }</h2>
+        { query.length === 0 &&
+          <div className="page-controls">
+            <button className="previous" onClick={( event) => this.changePage('previous') }>{ "<" }</button>
+            <h2 className="category">Category : { this.searchQuery[this.page] }</h2>
+            <button className="forward" onClick={ (event) => this.changePage('forward') }>{ ">" }</button>
+          </div>
         }
         <BookBuild
           showingBooks={ this.props.searched }
@@ -90,7 +93,7 @@ class SearchBooks extends Component {
       { query.length === 0 &&
         <div className="page-controls">
           <button className="previous" onClick={( event) => this.changePage('previous') }>{ "<" }</button>
-          <p className="page-number">Category { this.page+1 } of { this.searchQuery.length }</p>
+          <h2 className="category">Category : { this.searchQuery[this.page] }</h2>
           <button className="forward" onClick={ (event) => this.changePage('forward') }>{ ">" }</button>
         </div>
       }

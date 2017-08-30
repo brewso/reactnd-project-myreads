@@ -39,7 +39,7 @@ class BooksApp extends Component {
 
 //alphabatize books using sort function
 sortByName = ( books ) => {
-  return books.sort(function(a, b) {
+  return books.sort((a, b) => {
     var titleA = a.title.toUpperCase(); // ignore upper and lowercase
     var titleB = b.title.toUpperCase(); // ignore upper and lowercase
     if (titleA < titleB) {
